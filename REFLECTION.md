@@ -1,7 +1,5 @@
 # REFLECTION.md
 
-`https://github.com/Azemoytin/cs81-module7a-animation`
-
 ### What part of the code was most confusing and why?
 
 I had to think a little bit about how the `index` was used, but then I realized it helps the animation loop through the frames without going out of range. Once I saw how it worked, it made sense.
