@@ -11,14 +11,16 @@
   <div id="status">Please wait</div>
 
   <script>
+    // starts the loading animation when the page is loaded
     function runLoadingAnimation() {
       const loader = document.getElementById("loader");
       const status = document.getElementById("status");
 
+// An array of symbols and dots to simulate loading frames
       const frames = ["⏳", "⌛", ".", "..", "..."];
-      let index = 0;
-      let cycleCount = 0;
-      const maxCycles = 10;
+      let index = 0; // keeps track of current loop
+      let cycleCount = 0; // counts loops completed
+      const maxCycles = 10; // after 10 loops the animation ends
 
       const interval = setInterval(() => {
         loader.textContent = frames[index % frames.length];
@@ -26,14 +28,15 @@
         if (index % frames.length === 0) {
           cycleCount++;
         }
+          // Stops the animation when cycle ends
         if (cycleCount >= maxCycles) {
-          clearInterval(interval);
-          loader.textContent = "✅";
-          status.textContent = "Done!";
+          clearInterval(interval);  // ends the cycle permanently
+          loader.textContent = "✅"; // Shows checkmark when done
+          status.textContent = "Done!"; // Shows "done" as text when loop finishes
         }
       }, 500);
     }
-
+// runs the function when the page loads
     runLoadingAnimation();
   </script>
 
