@@ -1,2 +1,3 @@
 # cs81-module7a-animation
-School assignment
+
+https://github.com/Azemoytin/cs81-module7a-animation
